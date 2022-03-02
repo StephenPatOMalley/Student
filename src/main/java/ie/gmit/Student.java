@@ -9,13 +9,13 @@ public class Student {
             userName = name;
         }
         else{
-            throw new IllegalArgumentException("Invalid Name");
+            userName = String.valueOf(new IllegalArgumentException("Invalid Name"));
         }
         if(email.length() > 10){
             userEmail = email;
         }
         else{
-            throw new IllegalArgumentException("Invalid Email");
+            userEmail = String.valueOf(new IllegalArgumentException("Invalid Email"));
         }
     }
 }
