@@ -2,19 +2,18 @@ package ie.gmit;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StudentTest {
 
     @Test
     public void testStudentConstructor(){
-        Scanner inputObj = new Scanner(System.in);
-        System.out.println("Enter Name");
-        String name = inputObj.nextLine();
 
-        System.out.println("Enter Email");
-        String email = inputObj.nextLine();
+        String name = "Chris Barry";
+        String email = "cbarry@gmit.ie";
 
-        //Student student = new Student(name, email);
+        Student studentOne = new Student(name, email);
+        assertEquals(name, studentOne.userName);
+        assertEquals(email, studentOne.userEmail);
     }
 }
